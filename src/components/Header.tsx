@@ -6,7 +6,7 @@ export const Header = () => {
     <Flex
       as="header"
       w="100%"
-      maxWidth={1200}//1480
+      maxWidth={1480}//1480
       h="20"
       mx="auto"
       mt="4"
@@ -40,7 +40,7 @@ export const Header = () => {
           variant="unstyled"
           px="4"
           mr="4"
-          placeholder="Buscar na plataforma"
+          placeholder="Search in platform..."
           _placeholder={{
             color: "gray.400"
           }}
