@@ -1,10 +1,16 @@
-import { Flex } from "@chakra-ui/react"
+import { Flex, useBreakpointValue } from "@chakra-ui/react"
 import { Logo } from "./Logo"
 import { NotificationNav } from "./NotificationNav"
 import { Profile } from "./Profile"
 import { Search } from "./Search"
 
 export const Header = () => {
+  //o hook abaixo vai somente mostrar algumas informacoes de perfil a mais para telas grandes, senao mostra somente a foto de perfil 
+  const isWideScreen = useBreakpointValue({
+    base: false,
+    lg: true
+  })
+
   return (
     <Flex
       as="header"
@@ -23,7 +29,7 @@ export const Header = () => {
         ml="auto"
       >
         <NotificationNav />
-        <Profile />
+        <Profile showProfileData={isWideScreen}/>
       </Flex>
 
 
