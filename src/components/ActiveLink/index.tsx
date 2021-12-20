@@ -4,10 +4,9 @@ import { cloneElement, ReactElement } from "react";
 
 interface ActiveLinkProps extends LinkProps{
   children: ReactElement;
-  shouldMatchExactHref?: boolean;
 }
 
-export const ActiveLink = ({ children, shouldMatchExactHref = false, ...rest }: ActiveLinkProps) => {
+export const ActiveLink = ({ children, ...rest }: ActiveLinkProps) => {
   const { asPath } = useRouter() 
   let isActive = false;
 
