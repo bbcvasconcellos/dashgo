@@ -4,13 +4,18 @@ import { Header } from "../../src/components/Header";
 import { Sidebar } from "../../src/components/Sidebar";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Pagination } from "../../src/components/Pagination";
+import { useEffect } from "react";
 
 
 export default function UserList () {
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true
-  })
+  });
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/user').then(res => res.json()).then(data => console.log(data))
+  }, [])
    
   return(
     <Box>
