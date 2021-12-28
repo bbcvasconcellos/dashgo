@@ -14,7 +14,7 @@ export default function UserList () {
   });
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/user').then(res => res.json()).then(data => console.log(data))
+    fetch('http://localhost:3000/api/users').then(res => res.json()).then(data => console.log(data))
   }, [])
    
   return(
